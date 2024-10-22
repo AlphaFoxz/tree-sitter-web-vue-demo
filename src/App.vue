@@ -4,19 +4,12 @@ import HelloWorld from './components/HelloWorld.vue'
 import Parser from 'web-tree-sitter'
 import { onMounted } from 'vue'
 
-async function initNpmTreeSitter() {
+async function initTreeSitter() {
   await Parser.init()
   const parser = new Parser()
   console.info('tree-sitter initialized')
 }
-onMounted(initNpmTreeSitter)
-// async function initStandaloneScriptTreeSitter() {
-//   const Parser = (window as any).TreeSitter
-//   await Parser.init()
-//   const parser = new Parser()
-//   console.info('tree-sitter initialized')
-// }
-// onMounted(initStandaloneScriptTreeSitter)
+onMounted(initTreeSitter)
 </script>
 
 <template>
